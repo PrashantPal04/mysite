@@ -196,18 +196,58 @@
 </section>
 
 <!-- ABOUT -->
+<style>
+  /* Flexbox se side-by-side layout set karna */
+  .about-grid {
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Mobile view ke liye */
+  }
+
+  /* Image aur badge container ki width fix karna */
+  .about-photo-wrap {
+    flex: 0 0 350px; 
+    max-width: 100%;
+  }
+
+  .about-photo img {
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+  }
+
+  /* Badge ko image ke thoda neeche aur center mein karna */
+  .about-badge {
+    margin-top: 1.5rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05); /* Dark theme ke hisaab se subtle background */
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Text waale section ko bacha hua space dena */
+  .about-grid > .reveal.d2 {
+    flex: 1;
+    min-width: 300px;
+  }
+</style>
+
 <section id="about">
   <div class="container">
     <div class="about-grid">
+      
       <div class="about-photo-wrap reveal">
         <div class="about-photo">
           <img src="pic.jpeg" alt="Prashant Pal" />
-        <div class="about-badge">
+        </div> <div class="about-badge">
           <div class="badge-num">1+</div>
           <div class="badge-text" data-en>Years Experience</div>
           <div class="badge-text" data-de>Jahre Erfahrung</div>
         </div>
       </div>
+
       <div class="reveal d2">
         <p class="section-label" data-en>About Me</p>
         <p class="section-label" data-de>Über mich</p>
@@ -224,6 +264,7 @@
           <span class="skill-tag">Statistics</span><span class="skill-tag">EDA</span><span class="skill-tag">A/B Testing</span>
         </div>
       </div>
+      
     </div>
   </div>
 </section>
